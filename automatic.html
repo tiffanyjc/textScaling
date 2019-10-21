@@ -1,0 +1,101 @@
+<head>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "main.css" />
+    
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="navHeader">
+            Settings
+            <input type="text" placeholder="Find a setting">
+        </div>
+        <div class="navSection">
+            <span class="header">Vision</span>
+            <span>Display</span>
+            <span>Cursor & pointer size</span>
+            <span>Magnifier</span>
+            <span>High contrast</span>
+            <span>Color filters</span>
+            <span>Narrator</span>
+        </div>
+        <div class="navSection">
+                <span class="header">Hearing</span>
+                <span>Audio</span>
+                <span>Closed captions</span>
+        </div>
+        <div class="navSection">
+                <span class="header">Interaction</span>
+                <span>Speech</span>
+                <span>Keyboard</span>
+        </div>
+
+    </div>
+
+    <div id="p1"> 
+            <h1 id="display">Display</h1>
+            <p id="description">Make your display easier to see.</p>
+
+            <h2 id="subdisplay">Make text bigger</h2>
+
+            <p id="scaler">Current text scale is at 100%.</p>
+
+            <!-- <div id="sampleText1">
+                    <h1 id="head">Sample header text </h1>
+                    <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div> -->
+            
+                
+            <span id="littleA">A</span> <input id="slider" type="range" min="90" max="225" value="100" > <span id="bigA">A</span>
+                
+                
+            
+            
+                <!-- <div id="bottomText"> 
+                    <p id="para1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    
+                    <p id="para11">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </div>  -->
+
+    </div>  
+    
+
+
+<script>
+    var a = document.getElementById("slider"); 
+    a.addEventListener("input", function() {
+        console.log(a.value / 100);   
+        document.getElementById("nav").style.fontSize = (18 * a.value / 100); 
+        document.getElementById("display").style.fontSize = (18 * a.value / 100); 
+        document.getElementById("subdisplay").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("description").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("scaler").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("scaler").innerHTML = "Current text scale is at " + a.value + "%."; 
+        // document.getElementById("nav").style.lineHeight = (24 * a.value / 200); 
+        // document.getElementById("para").style.fontSize = (14 * a.value / 100); 
+        // document.getElementById("para1").style.fontSize = (14 * a.value / 100); 
+        // document.getElementById("para11").style.fontSize = (14 * a.value / 100); 
+    }, false); 
+
+    // var b = document.getElementById("slider2"); 
+    // b.addEventListener("input", function() {
+    //     console.log(b.value / 100);   
+    //     document.getElementById("head2").style.fontSize = (20 * b.value / 100); 
+    //     document.getElementById("para2").style.fontSize = (14 * b.value / 100); 
+    // }, false); 
+
+    // var b1 = document.getElementById("slider3"); 
+    // b1.addEventListener("input", function() {
+    //     console.log(b.value / 100);   
+    //     document.getElementById("head3").style.fontSize = (20 * b1.value / 100); 
+    //     document.getElementById("para3").style.fontSize = (14 * b1.value / 100); 
+    // }, false); 
+</script>
+
+</body>

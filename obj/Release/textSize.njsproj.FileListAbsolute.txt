@@ -1,0 +1,2 @@
+C:\Users\tifche\OneDrive - Microsoft\1 - Modern Input & Accessibility\Ease of Access\Text scaling prototype\obj\Release\textSize.njsprojAssemblyReference.cache
+C:\Users\tifche\OneDrive - Microsoft\1 - Modern Input & Accessibility\Ease of Access\Text scaling prototype\bin\Microsoft.NodejsTools.WebRole.dll

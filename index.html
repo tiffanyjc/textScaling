@@ -1,0 +1,149 @@
+<head>
+
+    
+</head>
+
+<body>
+
+    <div id="p1"> 
+    
+
+            <div id="sampleText1">
+                    <h1 id="head">Sample header text </h1>
+                    <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            
+                <input id="slider" type="range" min="90" max="225" value="100" > 
+            
+            
+                <div id="bottomText"> 
+                    <p id="para1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    
+                    <p id="para11">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </div> 
+
+    </div> 
+    <div id="p2"> 
+
+            <div id="sampleText2">
+                    <h1 id="head2">Sample header text </h1>
+                    <p id="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            
+                <input id="slider2" type="range" min="90" max="225" value="100" > 
+            
+            
+                <div id="bottomText2"> 
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </div> 
+
+    </div> 
+    <div id="p3"> 
+
+            
+            
+                <input id="slider3" type="range" min="90" max="225" value="100" > 
+                <div id="sampleText3">
+                        <h1 id="head3">Sample header text </h1>
+                        <p id="para3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+            
+                <div id="bottomText3"> 
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            </div> 
+
+    </div> 
+    
+
+
+<script>
+    var a = document.getElementById("slider"); 
+    a.addEventListener("input", function() {
+        console.log(a.value / 100);   
+        document.getElementById("head").style.fontSize = (20 * a.value / 100); 
+        document.getElementById("para").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("para1").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("para11").style.fontSize = (14 * a.value / 100); 
+    }, false); 
+
+    var b = document.getElementById("slider2"); 
+    b.addEventListener("input", function() {
+        console.log(b.value / 100);   
+        document.getElementById("head2").style.fontSize = (20 * b.value / 100); 
+        document.getElementById("para2").style.fontSize = (14 * b.value / 100); 
+    }, false); 
+
+    var b1 = document.getElementById("slider3"); 
+    b1.addEventListener("input", function() {
+        console.log(b.value / 100);   
+        document.getElementById("head3").style.fontSize = (20 * b1.value / 100); 
+        document.getElementById("para3").style.fontSize = (14 * b1.value / 100); 
+    }, false); 
+</script>
+
+</body>
+
+<style> 
+
+body {
+    display: flex; 
+    flex-direction: row; 
+}
+#p1, #p2, #p3 {
+    width: 500px; 
+    padding: 20px; 
+}
+
+h1 {
+    font-size: 20px; 
+}
+
+#bottomText {
+    width: 450px; 
+}
+
+#bottomText2 {
+    width: 450px; 
+}
+
+#sampleText1, #sampleText3 {
+    width: 400px; 
+    border: 1px solid black; 
+    padding: 20px; 
+    margin: 20px; 
+}
+
+#sampleText2 {
+    width: 400px; 
+    height: 200px; 
+    border: 1px solid black; 
+    padding: 20px; 
+    overflow-y: scroll; 
+
+}
+
+p {
+    font-size: 14px; 
+}
+
+input {
+    width: 400px; 
+    margin-top: 20px; 
+}
+</style> 

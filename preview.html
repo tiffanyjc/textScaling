@@ -1,0 +1,97 @@
+<head>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "main.css" />
+    
+</head>
+
+<body>
+
+        <div id="nav">
+                <div id="navHeader">
+                    <h1>Settings</h1>
+                    <input type="text" placeholder="Find a setting">
+                </div>
+                <div class="navSection">
+                    <h1>Vision</h1>
+                    <span>Display</span>
+                    <span>Cursor & pointer size</span>
+                    <span>Magnifier</span>
+                    <span>High contrast</span>
+                    <span>Color filters</span>
+                    <span>Narrator</span>
+                </div>
+                <div class="navSection">
+                        <h1>Hearing</h1>
+                        <span>Audio</span>
+                        <span>Closed captions</span>
+                </div>
+                <div class="navSection">
+                        <h1>Interaction</h1>
+                        <span>Speech</span>
+                        <span>Keyboard</span>
+                </div>
+        
+            </div>
+
+   
+    <div id="p2"> 
+            <h1 id="display">Display</h1>
+            <p id="description">Make your display easier to see.</p>
+
+            <h2 id="subdisplay">Make text bigger</h2>
+
+            <div id="sampleText2">
+                    <h1 id="head2">Text at 100% scale </h1>
+                    <p id="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <span id="littleA">A</span> <input id="slider2" type="range" min="90" max="225" value="100" >  <span id="bigA">A</span> 
+
+            <button id="buttonApply" onclick="apply()" disabled>Apply</button>
+            <button id="buttonReset" onclick="reset()" disabled>Reset</button>
+            
+
+    </div> 
+    
+
+
+<script>
+    var defaultScale = 100; 
+
+    function executeInputValue() {
+        var b = document.getElementById("slider2"); 
+        document.getElementById("head2").style.fontSize = (20 * b.value / 100); 
+        document.getElementById("para2").style.fontSize = (14 * b.value / 100); 
+        document.getElementById("buttonReset").disabled = !(b.value != defaultScale);
+        document.getElementById("buttonApply").disabled = !(b.value != defaultScale);
+
+        document.getElementById("head2").innerHTML = "Text at " + b.value + "% scale"; 
+    }
+     
+    document.getElementById("slider2").addEventListener("input", function() {
+        executeInputValue(); 
+    }, false); 
+
+
+    function apply() {
+        var a = document.getElementById("slider2"); 
+        document.getElementById("nav").style.fontSize = (18 * a.value / 100); 
+        document.getElementById("display").style.fontSize = (18 * a.value / 100); 
+        document.getElementById("subdisplay").style.fontSize = (14 * a.value / 100); 
+        document.getElementById("description").style.fontSize = (14 * a.value / 100);
+        
+        defaultScale = a.value; 
+        document.getElementById("buttonApply").disabled = true; 
+        document.getElementById("buttonReset").disabled = true; 
+    }
+    
+
+    function reset() {
+        document.getElementById("slider2").value = defaultScale; 
+        document.getElementById("buttonReset").disabled = true; 
+        executeInputValue(); 
+    }
+</script>
+
+</body>
